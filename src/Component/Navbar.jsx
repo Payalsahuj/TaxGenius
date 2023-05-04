@@ -15,9 +15,9 @@ import youtube from '../Images/icons8-youtube-24.png'
 
 function Navbar() {
     return (
-        <div style={{ width: '100%', position: 'fixed', zIndex: '1' }}>
+        <div style={{ width: '100%', position: 'fixed', zIndex: '1',top:'0%' }}>
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end',paddingTop:'8px',paddingRight:'20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'flex-end',paddingTop:'8px',paddingRight:'20px' ,backgroundColor:'#DAEFF4',zIndex:''}}>
                 <div style={{marginRight:'30px'}}>
                 <Breadcrumb separator=''>
                         <BreadcrumbItem>

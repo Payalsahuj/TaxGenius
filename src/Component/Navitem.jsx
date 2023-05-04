@@ -29,7 +29,8 @@ export default function WithSubnavigation() {
     return (
         <Box style={{width:'100%'}}  >
             <Flex
-                bg={'transparent'}
+                bg={'#DAEFF4'}
+                
                 //   bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('black', 'white')}
                 minH={'60px'}
@@ -75,7 +76,7 @@ export default function WithSubnavigation() {
                         fontWeight={600}
                         variant={'link'}
                         href={'#'}>
-                        Sign In
+                        LOGOUT
                     </Button>
                     <Button
                         as={'a'}
@@ -88,7 +89,7 @@ export default function WithSubnavigation() {
                         _hover={{
                             bg: '#4CAF50',
                         }}>
-                        Sign Up
+                        LOGIN
                     </Button>
                 </Stack>
             </Flex>
