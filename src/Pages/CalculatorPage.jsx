@@ -14,6 +14,7 @@ export const CalculatorPage = () => {
                 <h2>Calculators for Individuals</h2>
                     <div className='left'>
                     
+
                     <div > 
                         <a href="/salarytaxpage">
                         <img src="https://www.taxtim.com/za/images/calc-income-tax.png" alt="Salary Tax" />
@@ -22,38 +23,52 @@ export const CalculatorPage = () => {
                             <span>How to calculate how much PAYE and UIF will be deducted from your salary in order to work out your take home pay</span>
                         </div>
                         </a>
+
+                    <div>
+                        <img src="https://www.taxtim.com/za/images/calc-income-tax.png" alt="Salary Tax" />
+                        <p>Salary Tax</p>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-refund.png" alt="Tax Refund" />
                         <p>Tax Refund</p>
+
                         <div className='content'>
                             <span>How to calculate what your Tax Refund will be when you submit your tax return to SARS</span>
                         </div>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-lump-sum.png" alt="Retairment Lump Sum" />
                         <p>Retairment Lump Sum</p>
+
                         <div className='content'>
                             <span>How to calculate the tax payable on Pension, Provident or Retirement Annuity Fund lump sums due to voluntary withdrawal</span>
                         </div>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-travel.png" alt="Travel Deduction" />
                         <p>Travel Deduction</p>
+
                         <div className='content'>
                             <span>How to maximise your travel deduction by comparing the different methods you can use</span>
                         </div>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-capital-gains.png" alt="Capital Gains Tax" />
                         <p>Capital Gains Tax</p>
+
                         <div className='content'>
                             <span>How to calculate Capital Gains Tax on the disposal of your asset</span>
                         </div>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-health.png" alt="Medical Aid Credits" />
                         <p>Medical Aid Credits</p>
+
                         <div className='content'>
                             <span>How to calculate your medical tax credit/rebate</span>
                         </div>
@@ -61,6 +76,7 @@ export const CalculatorPage = () => {
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-wear-and-tear.png" alt="Water & Tear" />
                         <p>Water & Tear</p>
+
                         <div className='content'>
                             <span>How to calculate the Section 11(e) Depreciation / Wear and Tear deduction on the assets you use for work</span>
                         </div>
@@ -71,27 +87,39 @@ export const CalculatorPage = () => {
                         <div className='content'>
                             <span>Retairment saving calculator</span>
                         </div>
+
+                    </div>
+                    <div>
+                        <img src="https://www.taxtim.com/za/images/calc-retirement.png" alt="Retairment Saving" />
+                        <p>Retairment Saving</p>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-manufacturing-wear-and-tear.png" alt="Taxable Local interest" />
                         <p>Taxable Local interest</p>
+
                         <div className='content'>
                             <span>Taxable local interest calculator</span>
                         </div>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-income-tax.png" alt="Foreign Dividends" />
                         <p>Foreign Dividends</p>
+
                         <div className='content'>
                             <span>How to calculate the amount of foreign dividends on taxable on your income tax assessment</span>
                         </div>
+
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-capital-gains.png" alt="Home Office Calculator" />
                         <p>Home Office Calculator</p>
+
                         <div className='content'>
                             <span>How to claim your home office expenses when working from home</span>
                         </div>
+
                     </div>
                     </div>
                            
@@ -142,7 +170,9 @@ const DIV = styled.div`
         width: 100%;
         padding-left: 44px;
         padding-top: 100px;
+
         font-family: Arial, Helvetica, sans-serif;
+
     }
     .heading{
         text-align: left;
@@ -157,7 +187,9 @@ const DIV = styled.div`
         display: flex;
         width: 100%;
         height: 100vh;
+
         margin-top: 5px;
+
         gap: 100px;
     }
     .left-right h2{
@@ -222,6 +254,7 @@ const DIV = styled.div`
     .right-flex{
         display: flex;
     }
+
     .content{
         width: 100%;
         height: 100%;
@@ -245,6 +278,7 @@ const DIV = styled.div`
         font-size: 14px;
         margin-bottom: 65px;
     }
+
     .bot{
         width: 210px;
         height: 180px;
