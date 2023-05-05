@@ -261,7 +261,7 @@ const NAV_ITEMS = [
         href: '/tools',
     },
     {
-        label: 'Chatbot',
-        href: '/chatbot',
+        label: 'Paynow',
+        href: '/paynow',
     }
 ];
