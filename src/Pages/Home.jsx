@@ -1,16 +1,27 @@
+
 import image from '../Images/homefront_cleanup.png'
 import arrow from '../Images/icons8-sort-right-30.png'
 import bot from '../Images/Bot.png'
-import decoreimg from '../Images/IMpact_Business_Case_For_Women_In_Tech_Main.jpg'
+import decoreimg from '../Images/Untitled Project.jpg'
+import done from '../Images/icons8-done-64.png'
+import puzzle from '../Images/icons8-puzzle-64.png'
+import confi from '../Images/icons8-self-confidence-64.png'
+import refund from '../Images/icons8-exchange-dollar-96.png'
+import help from '../Images/icons8-helping-hand-50.png'
+import secure from '../Images/icons8-secure-48.png'
+import clock from '../Images/icons8-clock-32.png'
 import styled from "styled-components"
 import { useState } from 'react'
 import Multistep from '../Component/Homelogin'
+import { Link } from 'react-router-dom'
+import LargeWithNewsletter from '../Component/Footer'
+// import KommunicateChat from '../Component/chat'
 function Home() {
     const [onvideo, setonvideo] = useState(false)
     console.log(onvideo)
     return <DIV onvideo={onvideo}>
-        <div style={{ marginTop:'40px',position: 'absolute', width: '100%' }}>
-            <img src={image}  id='imgback' alt="" />
+        <div style={{ marginTop: '55px', position: 'absolute', width: '100%' }}>
+            <img src={image} id='imgback' alt="" />
             <div id='textimg'>
                 <b>
                     <h1>THE FASTEST, EASIEST WAY</h1>
@@ -35,79 +46,147 @@ function Home() {
                 <Multistep />
             </div>
         </div>
-        <div style={{ position: 'relative', top: '550px' }} >
-            <div id='dotcontainer'>
-                <div className='separate'>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                
+
+
+        <div style={{ marginTop: '30%', border: "2px solid red" }} >
+            <div style={{ display: 'flex', justifyContent: 'space-evenly', gap: '100px', width: '100%', border: "2px solid green" }}>
+                <div style={{ width: '430px', border: '2px solid green' }}>
+
+                    <img src={decoreimg} width={'100%'} alt="" />
+
                 </div>
-                <div className='separate'>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                
-                </div>
-                <div className='separate'>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div style={{ border: '2px solid black', padding: '20px 25px', textAlign: 'left', width: '50%' }}>
+                    <h1 style={{ fontSize: '27px' }}><b>How Does TaxGenius Work?</b></h1>
+                    <h1 style={{ fontSize: '24px' }}><b>It's quite easy actually!</b></h1>
+                    <p><b>Let's have a chat. After answering my simple questions I'll complete your text return and file it directly with SARS for your maximum possible refund!</b></p>
+                    <br />
+                    <div >
+                        <h1 className='headfirst' ><img src={done}  alt="" />  <b>Register for TaxGenius account</b></h1>
+                        <p className='headpara'>Tell me a bit about your taxes and I'll show which TaxGenius package and price suits your need best</p>
+                        <br />
+                        <h1 className='headfirst' ><img src={done}  alt="" />  <b>Have a chat with me online</b></h1>
+                        <p className='headpara'>We will give you the best possible way to return your tax easily, checking all deductions for maximum refund before filing at SARS.</p>
+                        <br />
+                        <h1 className='headfirst'><img src={done} alt="" />  <b>Pay by Card To submit your Return</b></h1>
+                        <p className='headpara'>Pay for your tax return service via card directly on site.</p>
+                        <br />
+                        <div style={{ display: 'flex', gap: '20px' }}>
+                        <button id='buttonone'>FIND OUT MORE</button>
+                        <button id='buttontwo'>GET STARTED</button></div>
+                    </div>
+
                 </div>
 
-                <div className='separate'>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+            </div>
+            <div  >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#DAEFF4" fill-opacity="1" d="M0,288L60,256C120,224,240,160,360,122.7C480,85,600,75,720,90.7C840,107,960,149,1080,149.3C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                </svg>
+                <div style={{ backgroundColor: "#DAEFF4" }}>
+                    <h1 style={{ fontSize: '27px' }}><b>Why Should I Use TaxGenius to Do My Personal or Company Tax Return?</b></h1>
+                    <h1 style={{ fontSize: '27px', fontWeight: '600px' }}>Great Question!</h1>
+                    <br />
+                    <p>Let's have a chat. After answering mysimple questions I'll complete your tax return and file</p>
+                    <p>It directly with SARS for your maximum possible refund!</p>
+                    <br />
+                    <br />
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '35px', padding: '0px 80px' }}>
+                        <div className='griddiv'>
+                            <h1 className='griddivhead'><img src={puzzle} style={{ display: 'block', width: '45px', marginRight: '20px' }} alt="" /><b> Full Integrated</b></h1>
+                            <br />
+                            <p>Once you authorise TaxGenius, I can import your IRP5 data and file your tax return directly with SARS.</p>
+                        </div>
+                        <div className='griddiv'>
+                            <h1 className='griddivhead'><img src={confi} style={{ display: 'block', width: '45px', marginRight: '20px' }} alt="" /><b> File With Confidance</b></h1>
+                            <br />
+                            <p>I'll make sure your SARS tax return is completed fully and correctly, so you can file with confidence. On time, every time.</p>
+                        </div>
+                        <div className='griddiv'>
+                            <h1 className='griddivhead'><img src={refund} style={{ display: 'block', width: '55px', marginRight: '20px' }} alt="" /><b> Max Possible Refund</b></h1>
+                            <br />
+                            <p>My questions are designed to uncover all your available tax deductions to reduce your tax and get your maximum refund.</p>
+                        </div>
+                        <div className='griddiv'>
+                            <h1 className='griddivhead'><img src={help} style={{ display: 'block', width: '45px', marginRight: '20px' }} alt="" /><b> Tax Experts on Hand</b></h1>
+                            <br />
+                            <p>TaxGenius is maintained by registered tax practitioners, who can help you with those slightly more complicated tax questions.</p>
+                        </div>
+                        <div className='griddiv'>
+                            <h1 className='griddivhead'><img src={secure} style={{ display: 'block', width: '65px', marginRight: '6px' }} alt="" /><b>Your Information is Secure</b></h1>
+                            <br />
+                            <p>I'm super strict on security. Your personal data is kept secure via 256-bit SSL at all times. Absolutely no compromise.</p>
+                        </div>
+                        <div className='griddiv'>
+                            <h1 className='griddivhead'><img src={clock} style={{ display: 'block', width: '50px', marginRight: '20px' }} alt="" /><b> Quick ans Easy</b></h1>
+                            <br />
+                            <p>Most people finish their tax returns on TaxTim in 20 minutes or less. But fast doesn't mean rushing - I'm thorough too.</p>
+                        </div>
+                    </div>
                 </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#DAEFF4" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,96C640,117,800,203,960,245.3C1120,288,1280,288,1360,288L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                </svg>
 
-                <div className='separate'>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div style={{ padding: '10px 60px', border: '2px solid red', marginBottom: '60px' }}>
+                    <h1 style={{ fontSize: '27px' }}><b>Who Partners With TaxGenius?</b></h1>
+                    <p style={{ fontSize: '19px' }}>We have several <span style={{ color: '#0c690c' }}><b>fantastic</b></span> partner offers.</p>
+                    <br />
+                    <br />
+                    <br />
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
+                        <div className='secondgrid'>
+                            <img className='secondgridimg' src='https://www.taxtim.com/za/images/momentum-logo.png' alt="" />
+                            <br />
+                            <br />
+                            <p>Get Tax Genius FREE</p>
+                            <Link to='/' ><u style={{ color: 'green' }}>Read more</u></Link>
+                        </div>
+                        <div className='secondgrid'>
+                            <img className='secondgridimg' src="https://www.taxtim.com/za/images/sanlam-reality.png" alt="" />
+                            <br />
+                            <p>Get TaxTim FREE (earn up to 3,000 tier points)</p>
+                            <Link to='/' ><u style={{ color: 'green' }}>Read more</u></Link>
+                        </div>
+                        <div className='secondgrid'>
+                            <img className='secondgridimg' src="https://www.taxtim.com/za/images/partner-fnb-ebucks.png" alt="" />
+                            <br />
+                            <p>Get eBucks for using TaxTim (get 50% back in eBucks)</p>
+                            <Link to='/' ><u style={{ color: 'green' }}>Read more</u></Link>
+                        </div>
+                        <div className='secondgrid'>
+                            <img className='secondgridimg' src="https://www.taxtim.com/za/images/partner-old-mutual.png" alt="" />
+                            <br />
+                            <p>Get TaxTim discounted or FREE</p>
+                            <Link to='/' ><u style={{ color: 'green' }}>Read more</u></Link>
+                        </div>
+                    </div>
                 </div>
-                
-            </div>
-            <div>
-                <img src={decoreimg} style={{width:'460px',height:'400px',borderRadius:'5px',position:'relative',left:'12%',zIndex:'1'}} alt="" />
-            </div>
-            <div id='starcontainer'>
-                <div className='star'>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            </div>
-            <div  className='star'>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            </div>
-            <div  className='star'>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            </div>
-            <div  className='star'>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            <div class="five-pointed-star"></div>
-            </div>
-            </div>
+                <div style={{ border: '2px solid yellow', backgroundColor: '#ECEFF1', padding: '30px 10px' }}>
+                    <h1 style={{ fontSize: '27px' }}><b>Who Uses TaxGenius?</b></h1>
+                    <p style={{ fontSize: '19px' }}>TaxGenius has Helped 14 Million South Africans in 11 Years. Here's What They Say.</p>
+                    <br />
+                    <br />
+                    <div style={{ display: 'flex', justifyContent: 'space-evenly', gap: '20px', padding: '20px 40px' }}>
+                        <div className='thirddiv'>
+                            <img src={bot}  alt="" />
+                            <br />
+                            <h1>Thank you so much for saving the skin of this lastminute.com tax payers!</h1>
+                        </div>
+                        <div className='thirddiv'>
+                            <img src={bot}  alt="" />
+                            <br />
+                            <h1>Thank you for making this so easy for me. Especiallytaht I'm not really computer literate.</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#DAEFF4" fill-opacity="1" d="M0,288L80,282.7C160,277,320,267,480,234.7C640,203,800,149,960,154.7C1120,160,1280,224,1360,256L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                    </svg>
+                    <LargeWithNewsletter/>
+                </div>
+            </div>
         </div>
 
     </DIV>
@@ -143,6 +222,7 @@ const DIV = styled.div`
     top:-180.5%;
     left:1%;
 }
+
 #vedio{
     display:${({ onvideo }) => onvideo ? 'flex' : 'none'};
 }
@@ -153,81 +233,60 @@ const DIV = styled.div`
     right:-63%;
     top:300px;  
 }
-#dotcontainer{
-    /* border:2px solid red; */
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    left:40%;
-    top:-9%;
-    
-
+.headfirst{
+    display: flex;
+    font-size:19px;
 }
-#starcontainer{
-    /* border:2px solid green;  */
-    margin:auto;
-    position:absolute;
-    left:9.1%;
-    top:88%;
+.headfirst img{
+    display: block;
+     width: 28px;
+     margin-right: 15px;
 }
-.separate{
-    display:flex;
+.headpara{
+   padding-left: 45px;
 }
-.dot {
-
-  margin: 4px 4px;
-  height: 10px;
-  width: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: flex;
-}
-
-.star{
-    display:flex;
-   
-}
-.five-pointed-star {
- --star-color:green;
- /* margin:1em auto; */
- font-size:8px;
- margin:9px 2px;
- display: block;
- width: 0px;
- height: 0px;
- border-right: 1em solid transparent;
- border-bottom: 0.7em solid var(--star-color);
- border-left: 1em solid transparent;
- transform: rotate(35deg);
-}
-
-
-.five-pointed-star:before {
-  
- border-bottom: 0.8em solid var(--star-color);
- border-left: 0.3em solid transparent;
- border-right: 0.3em solid transparent;
- position: absolute;
- height: 0;
- width: 0;
- top: -0.45em;
- left: -0.65em;
- display: block;
- content:"";
- transform: rotate(-35deg);
-}
-.five-pointed-star:after {
- position: absolute;
- display: block;
- top: 0.03em;
- left: -1.05em;
- width: 0;
- height: 0;
- border-right: 1em solid transparent;
- border-bottom: 0.7em solid var(--star-color);
- border-left: 1em solid transparent;
- transform: rotate(-70deg);
- content:"";
-}
-    
+ #buttonone{
+    border: 2px solid green;
+    padding: 5px 25px;
+    border-radius:5px;
+ }
+ #buttontwo{
+    background-color: green;
+     color: white;
+     border-radius:5px;
+     padding:5px 25px;
+ }
+ .griddiv{
+     border: 2px solid red;
+      padding: 10px 10px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     border-radius:6px;
+ }
+ .griddivhead{
+    border: 2px solid orange;
+     display: flex;
+     justify-content:center;
+     align-items:center;
+     font-size:24px;
+ }
+ .secondgrid{
+    margin: auto;
+     padding: 10px 20px;
+ }
+ .secondgridimg{
+    width: 200px;
+     margin: auto;
+ }
+ .thirddiv{
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 50px 5px;
+     width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ .thirddiv img{
+    display: block;
+     width: 50px;
+      margin: auto;
+ }
 `
