@@ -45,23 +45,23 @@ function LogTool() {
               Now you can keep your vehicle log book up to date with<br/>
               <span id='span'> one-click simplicity from TaxTim.</span></p>
               <div className='tick-images'>
-                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                <div style={{display: "flex", paddingLeft:"35px", gap:"7px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
                   <p>Built-in intelligence saves you time</p>
                 </div>
-                <div>
+                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
                   <p>Electronic logbook is backed up safely in the cloud</p>
                 </div>
-                <div>
+                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
                   <p>Saves trips, fuel and maintenance expenses</p>
                 </div>
-                <div>
+                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
                   <p>Tax-relevant summary provided at year end</p>
                 </div>
-                <div>
+                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
                   <p>Download full vehicle logbook records to your PC for SARS</p>
                 </div>
