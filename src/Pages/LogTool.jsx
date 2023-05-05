@@ -45,25 +45,25 @@ function LogTool() {
               Now you can keep your vehicle log book up to date with<br/>
               <span id='span'> one-click simplicity from TaxTim.</span></p>
               <div className='tick-images'>
-                <div style={{display: "flex", paddingLeft:"35px", gap:"7px"}}>
+                <div style={{display: "flex", paddingLeft:"35px", gap:"10px",border:"1px solid red",width:"500px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p>Built-in intelligence saves you time</p>
+                  <p style={{marginTop:"-5px"}}>Built-in intelligence saves you time</p>
                 </div>
-                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                <div style={{display: "flex",   gap:"7px",border:"1px solid red",width:"500px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p>Electronic logbook is backed up safely in the cloud</p>
+                  <p style={{marginTop:"-5px"}}>Electronic logbook is backed up safely in the cloud</p>
                 </div>
-                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px",border:"1px solid red",width:"500px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p>Saves trips, fuel and maintenance expenses</p>
+                  <p style={{marginTop:"-5px"}}>Saves trips, fuel and maintenance expenses</p>
                 </div>
-                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                <div style={{display: "flex",  paddingLeft:"35px", gap:"7px",border:"1px solid red",width:"500px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p>Tax-relevant summary provided at year end</p>
+                  <p style={{marginTop:"-5px"}}>Tax-relevant summary provided at year end</p>
                 </div>
-                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                <div style={{display: "flex",  paddingLeft:"35px", gap:"7px",border:"1px solid red",width:"500px"}}>
                 <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p>Download full vehicle logbook records to your PC for SARS</p>
+                  <p style={{marginTop:"-5px"}}>Download full vehicle logbook records to your PC for SARS</p>
                 </div>
               </div>
           </div>
