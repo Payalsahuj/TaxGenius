@@ -12,10 +12,15 @@ import twitter from "../Images/icons8-twitter-30.png"
 import insta from '../Images/icons8-instagram-old-50.png'
 import linkedin from '../Images/icons8-linkedin-2-30.png'
 import youtube from '../Images/icons8-youtube-24.png'
-
+import sidetwitter from "../Images/icons8-twitter-squared-48.png"
+import sidefacebook from '../Images/icons8-facebook-48.png'
+import sidelinkedin from '../Images/icons8-linkedin-48.png'
+import styled from "styled-components"
+// import { hover } from "@testing-library/user-event/dist/hover"
 function Navbar() {
     return (
-        <div style={{ width: '100%', position: 'fixed', zIndex: '1',top:'0%' }}>
+        <DIV>
+        <div style={{ width: '100%', position: 'fixed', zIndex: '5',top:'0%' }}>
 
             <div style={{ display: 'flex', justifyContent: 'flex-end',paddingTop:'8px',paddingRight:'20px' ,backgroundColor:'#DAEFF4',zIndex:''}}>
                 <div style={{marginRight:'30px'}}>
@@ -69,8 +74,24 @@ function Navbar() {
                 </div>
             </div>
             <WithSubnavigation />
+            <div style={{position:'fixed',right:'-10px',width:'60px',top:'25%'}}>
+                <div className="sideconnectiondiv" ><img src={sidetwitter}  alt="" /></div>
+                <div className="sideconnectiondiv"><img src={sidefacebook} alt="" /></div>
+                <div className="sideconnectiondiv" ><img src={sidelinkedin} alt="" /></div>
+            </div>
         </div>
+        </DIV>
     )
 }
 
 export default Navbar
+
+
+const DIV = styled.div`
+    .sideconnectiondiv:hover{
+        /* transform:scale(1.1); */
+        transform:scaleX(1.2);
+        cursor:pointer;
+        /* margin-right:40px; */
+    }
+`
