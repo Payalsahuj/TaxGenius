@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
-// import Kommunicate from '@kommunicate/kommunicate-chatbot-plugin';
-// Kommunicate.init("20edef014f4a3795b3d32beacc04452fe")
+import Kommunicate from '@kommunicate/kommunicate-chatbot-plugin';
+Kommunicate.init("20edef014f4a3795b3d32beacc04452fe")
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
