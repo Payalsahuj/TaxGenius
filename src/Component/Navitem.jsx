@@ -14,6 +14,7 @@ import {
     useColorModeValue,
     // useBreakpointValue,
     useDisclosure,
+    Image,
     // Avatar,
 } from '@chakra-ui/react';
 import {
@@ -53,11 +54,11 @@ export default function WithSubnavigation() {
                         aria-label={'Toggle Navigation'}
                     />
                 </Flex>
-                <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    
-                      <img src={logo} width={'180px'} alt="" />
-                    
-
+                <Flex flex={{ base: 1 }} alignItems={'center'} justify={{ base: 'center', md: 'start' }}>
+                <Link  href={"/"}>
+                      {/* <img src={logo} width={'190px'} border='2px solid red' alt="" /> */}
+                    <Image src={logo} width={'190px'}  alt=''/>
+                      </Link>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
@@ -70,9 +71,9 @@ export default function WithSubnavigation() {
                     spacing={6}>
                     <Button
                     color={'black'}
-                    
+                    size={{base:'xs',md:'md',lg:'lg'}}
                         as={'a'}
-                        fontSize={'sm'}
+                        fontSize={{base:'xs',md:'sm'}}
                         fontWeight={600}
                         variant={'link'}
                         href={'#'}>
@@ -80,12 +81,13 @@ export default function WithSubnavigation() {
                     </Button>
                     <Button
                         as={'a'}
-                        display={{ base: 'none', md: 'inline-flex' }}
-                        fontSize={'sm'}
+                        display={{ base: 'ninline-flex', md: 'inline-flex' }}
+                        fontSize={{base:'xs',md:'sm'}}
                         fontWeight={600}
                         color={'white'}
                         bg={'green'}
                         href={'#'}
+                        size={{base:'xs',md:'md',lg:'lg'}}
                         _hover={{
                             bg: '#4CAF50',
                         }}>
@@ -261,7 +263,7 @@ const NAV_ITEMS = [
         href: '/tools',
     },
     {
-        label: 'Chatbot',
-        href: '/chatbot',
+        label: 'Paynow',
+        href: '/paynow',
     }
 ];
