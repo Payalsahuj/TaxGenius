@@ -286,7 +286,7 @@ export default function Multistep() {
         borderWidth="1px"
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={350}
+        maxWidth={340}
     //    maxHeight={437}
         p={4}
         m="10px auto"
