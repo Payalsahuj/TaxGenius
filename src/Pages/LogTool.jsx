@@ -12,7 +12,7 @@ function LogTool() {
     <DIV>
       {/* <Navbar /> */}
       <div className='top'>
-       
+
 
         <div className='image-car'>
           <img src="https://media.taxtim.com/images/apps-webpage-icon.svg" alt="error" width="70px" />
@@ -42,30 +42,49 @@ function LogTool() {
           <div className='tick-images'>
             <h2>Get our SARS Logbook App on your phone today</h2>
             <p>Keeping your SARS travel logbook in order used to be a headache!
-              Now you can keep your vehicle log book up to date with<br/>
+              Now you can keep your vehicle log book up to date with<br />
               <span id='span'> one-click simplicity from TaxTim.</span></p>
-              <div className='tick-images'>
-                <div style={{display: "flex", paddingLeft:"35px", gap:"10px",border:"1px solid red",width:"500px"}}>
-                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p style={{marginTop:"-5px"}}>Built-in intelligence saves you time</p>
-                </div>
-                <div style={{display: "flex",   gap:"7px",border:"1px solid red",width:"500px"}}>
-                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p style={{marginTop:"-5px"}}>Electronic logbook is backed up safely in the cloud</p>
-                </div>
-                <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px",border:"1px solid red",width:"500px"}}>
-                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p style={{marginTop:"-5px"}}>Saves trips, fuel and maintenance expenses</p>
-                </div>
-                <div style={{display: "flex",  paddingLeft:"35px", gap:"7px",border:"1px solid red",width:"500px"}}>
-                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p style={{marginTop:"-5px"}}>Tax-relevant summary provided at year end</p>
-                </div>
-                <div style={{display: "flex",  paddingLeft:"35px", gap:"7px",border:"1px solid red",width:"500px"}}>
-                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
-                  <p style={{marginTop:"-5px"}}>Download full vehicle logbook records to your PC for SARS</p>
-                </div>
+            <div className='tick-image'>
+              <div style={{ display: "flex", paddingLeft: "35px", gap: "10px", width: "500px" }}>
+                <img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
+                <p style={{ marginTop: "-5px" }}>Built-in intelligence saves you time</p>
               </div>
+              <div style={{ display: "flex", gap: "7px", width: "500px", marginTop: "19px", marginLeft: "35px" }}>
+                <img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
+                <p style={{ marginTop: "-5px" }}>Electronic logbook is backed up safely in the cloud</p>
+              </div>
+              <div style={{ display: "flex", paddingLeft: "35px", gap: "7px", width: "500px", marginTop: "19px" }}>
+                <img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
+                <p style={{ marginTop: "-5px" }}>Saves trips, fuel and maintenance expenses</p>
+              </div>
+              <div style={{ display: "flex", paddingLeft: "35px", gap: "7px", width: "500px", marginTop: "19px" }}>
+                <img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
+                <p style={{ marginTop: "-5px" }}>Tax-relevant summary provided at year end</p>
+              </div>
+              <div style={{ display: "flex", paddingLeft: "35px", gap: "7px", width: "550px", marginTop: "19px" }}>
+                <img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
+                <p style={{ marginTop: "-5px" }}>Download full vehicle logbook records to your PC for SARS</p>
+              </div>
+            </div>
+            <div className='bottom-p' style={{fontSize:"10px",width:"800px",margin:"25px 0px"}}>
+              <p>Our Logbook App is a progressive web-app, thus it works on iPhone, Android, PC and more.</p>
+            </div>
+            <div className='bottom-heading' style={{fontSize:"17px",fontWeight:"700",color:"black"}}>
+              <p>GET YOUR FREE VEHICLE LOGBOOK</p>
+            </div>
+            <div style={{fontSize:"10px",width:"800px",margin:"25px 0px"}}>
+              <p>Start using our Logbook App by visiting <span style={{fontSize:"17px",fontWeight:"700",color:"#646566"}}>logbook.taxtim.com</span> in your cellphone browser now. Once the app has loaded, add it to your home screen for future use.</p>
+            </div>
+            <Button
+            size='md'
+            height='35px'
+            width='150px'
+            // border='0px'
+            borderRadius={"none"}
+            borderColor='green.500'
+          >
+            Get Our App
+          </Button>
           </div>
         </div>
       </div>
@@ -198,4 +217,21 @@ const DIV = styled.div`
    
    
    } 
+   .bottom-heading{
+    font-weight:bolder;
+    color:black;
+    border:1px solid black;
+    margin:5px 0px;
+   }
+   .div-2 button{
+    display:flex;
+    display:block;
+    margin:auto;
+  
+    border:none;
+    background-color:#EB4F36;
+    color:white;
+    
+    margin:0px 0px 20px 0px;
+   }
 `

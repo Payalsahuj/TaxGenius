@@ -5,6 +5,7 @@ import { CalculatorPage } from "../Pages/CalculatorPage"
 import { SalarytaxPage } from "../Pages/SalarytaxPage"
 
 import  LogTool  from "../Pages/LogTool"
+import {Company} from "../Pages/Company"
 
 
 
@@ -17,6 +18,9 @@ function Allroutes(){
             <Route path="/salarytaxpage" element={<SalarytaxPage/>}/>
 
             <Route path="/tools" element={<LogTool />}/>
+
+            <Route path="/company" element={<Company />}/>
+            
 
         </Routes>
     </div>
