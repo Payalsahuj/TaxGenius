@@ -6,6 +6,7 @@ import {
     BreadcrumbLink,
     BreadcrumbSeparator,
     Divider,
+    Link,
 } from '@chakra-ui/react'
 import facebook from "../Images/icons8-facebook-f-50.png"
 import twitter from "../Images/icons8-twitter-30.png"
@@ -38,7 +39,7 @@ function Navbar() {
                         </BreadcrumbItem>
 
                         <BreadcrumbItem >
-                            <BreadcrumbLink href='#'><img width={'20px'} src={insta} alt="" /></BreadcrumbLink>
+                            <BreadcrumbLink href='https://www.instagram.com/taxtim_za/'><img width={'20px'} src={insta} alt="" /></BreadcrumbLink>
                         </BreadcrumbItem>
 
                         <BreadcrumbItem >
@@ -57,15 +58,15 @@ function Navbar() {
                 <div >
                     <Breadcrumb fontSize={'13px'} separator='|'>
                         <BreadcrumbItem>
-                            <BreadcrumbLink href='#'>Partners</BreadcrumbLink>
+                            <BreadcrumbLink href='#'>FAQ</BreadcrumbLink>
                         </BreadcrumbItem>
 
                         <BreadcrumbItem>
-                            <BreadcrumbLink href='#'>Students</BreadcrumbLink>
+                            <BreadcrumbLink href='#'>Blog</BreadcrumbLink>
                         </BreadcrumbItem>
 
                         <BreadcrumbItem isCurrentPage>
-                            <BreadcrumbLink href='#'>Blog</BreadcrumbLink>
+                           <a href='/about'> <BreadcrumbLink >About</BreadcrumbLink></a>
                         </BreadcrumbItem>
                         <BreadcrumbItem isCurrentPage>
                             <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
@@ -75,9 +76,9 @@ function Navbar() {
             </div>
             <WithSubnavigation />
             <div style={{position:'fixed',right:'-10px',width:'60px',top:'25%'}}>
-                <div className="sideconnectiondiv" ><img src={sidetwitter}  alt="" /></div>
-                <div className="sideconnectiondiv"><img src={sidefacebook} alt="" /></div>
-                <div className="sideconnectiondiv" ><img src={sidelinkedin} alt="" /></div>
+                <div className="sideconnectiondiv" ><a href='https://twitter.com/intent/tweet?text=Tax%20Calculators%20%7C%20TaxTim%20SA&url=https%3A%2F%2Fwww.taxtim.com%2Fza%2Fcalculators%2F%23.ZFKpIUrzyDc.twitter&related'><img src={sidetwitter}  alt="" /></a></div>
+                <div className="sideconnectiondiv"><a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=140586622674265&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv10.0%2Fdialog%2Fshare%3Fredirect_uri%3Dhttp%253A%252F%252Fs7.addthis.com%252Fstatic%252Fthankyou.html%26display%3Dpopup%26href%3Dhttps%253A%252F%252Fwww.taxtim.com%252Fza%252Fcalculators%252F%2523.ZFadKsUaero.facebook%26client_id%3D140586622674265%26ret%3Dlogin&cancel_url=https%3A%2F%2Fs7.addthis.com%2Fstatic%2Fthankyou.html%3Ferror_code%3D4201%26error_message%3DUser%2Bcanceled%2Bthe%2BDialog%2Bflow%23_%3D_&display=popup&locale=en_GB"><img src={sidefacebook} alt="" /></a></div>
+                <div className="sideconnectiondiv" ><a href='https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.taxtim.com%2Fza%2Fcalculators%2F%23.ZFKo_fo-0X8.linkedin'><img src={sidelinkedin} alt="" /></a></div>
             </div>
         </div>
         </DIV>
