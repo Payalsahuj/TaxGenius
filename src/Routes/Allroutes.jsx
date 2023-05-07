@@ -9,6 +9,8 @@ import  LogTool  from "../Pages/LogTool"
 import TravelDeductionPage from "../Pages/TaravelDeductionPage"
 
 import {Company} from "../Pages/Company"
+import IncomeTax from "../Pages/IncomeTax"
+import LeasePremium from "../Pages/LeasePremium"
 
 
 
@@ -21,9 +23,11 @@ function Allroutes(){
             <Route path="/calculators" element={<CalculatorPage/>}/>
             <Route path="/salarytaxpage" element={<SalarytaxPage/>}/>
             <Route path="/traveldeductionpage" element={<TravelDeductionPage/>}/>
-            <Route path="/tools" element={<LogTool />}/>
+            <Route path="/logbook" element={<LogTool />}/>
 
             <Route path="/company" element={<Company />}/>
+            <Route path="/incomeTax" element={<IncomeTax />}/>
+            <Route path="/lease-premium" element={<LeasePremium />}/>
             
 
         </Routes>
