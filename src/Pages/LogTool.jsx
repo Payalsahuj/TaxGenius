@@ -7,7 +7,9 @@ import gift from "../Images/logbook-image.gif"
 
 
 
+
 function LogTool() {
+  
   return (
     <DIV>
       {/* <Navbar /> */}
@@ -19,7 +21,7 @@ function LogTool() {
 
           <h1>Record Your Work Travel</h1>
           <p>Take control of your own Tax returns</p>
-
+        <a href='https://logbook.taxtim.com/#/'>
           <Button
             size='md'
             height='35px'
@@ -27,9 +29,11 @@ function LogTool() {
             // border='0px'
             borderRadius={"none"}
             borderColor='green.500'
+           
           >
             Get Our App
           </Button>
+          </a>
         </div>
       </div>
 
@@ -75,6 +79,7 @@ function LogTool() {
             <div style={{fontSize:"10px",width:"800px",margin:"25px 0px"}}>
               <p>Start using our Logbook App by visiting <span style={{fontSize:"17px",fontWeight:"700",color:"#646566"}}>logbook.taxtim.com</span> in your cellphone browser now. Once the app has loaded, add it to your home screen for future use.</p>
             </div>
+            <a href='https://logbook.taxtim.com/#/'>
             <Button
             size='md'
             height='35px'
@@ -85,6 +90,7 @@ function LogTool() {
           >
             Get Our App
           </Button>
+          </a>
           </div>
         </div>
       </div>
