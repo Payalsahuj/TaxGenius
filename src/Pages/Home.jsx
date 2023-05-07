@@ -14,7 +14,7 @@ import styled from "styled-components"
 import { useState } from 'react'
 import Multistep from '../Component/Homelogin'
 import { Link } from 'react-router-dom'
-import LargeWithNewsletter from '../Component/Footer'
+
 // import KommunicateChat from '../Component/chat'
 function Home() {
     const [onvideo, setonvideo] = useState(false)
@@ -87,7 +87,7 @@ function Home() {
                         <p className='headpara'>Pay for your tax return service via card directly on site.</p>
                         <br />
                         <div style={{ display: 'flex', gap: '20px' }}>
-                            <button id='buttonone' >FIND OUT MORE</button>
+                           <Link to='/about' ><button id='buttonone' >FIND OUT MORE</button></Link> 
                             <button id='buttontwo'>GET STARTED</button></div>
                     </div>
 
@@ -196,11 +196,7 @@ function Home() {
                     </div>
                 </div>
                 <div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path fill="#DAEFF4" fillOpacity="1" d="M0,288L80,282.7C160,277,320,267,480,234.7C640,203,800,149,960,154.7C1120,160,1280,224,1360,256L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-                    </svg>
-                    <LargeWithNewsletter />
+                   
                 </div>
             </div>
         </div>
@@ -303,7 +299,7 @@ const DIV = styled.div`
    padding-left: 45px;
 }
  #buttonone{
-   
+   border:2px solid grey;
     padding: 5px 25px;
     border-radius:5px;
  }

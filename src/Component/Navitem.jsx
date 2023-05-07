@@ -259,11 +259,11 @@ const NAV_ITEMS = [
         href: '/company',
     },
     {
-        label: 'Tools',
-        href: '/tools',
+        label: 'Logbook',
+        href: '/logbook',
     },
     {
         label: 'Paynow',
-        href: '/paynow',
+        href: '/paytax',
     }
 ];
