@@ -15,6 +15,7 @@ import TravelDeductionPage from "../Pages/TaravelDeductionPage"
 import {Company} from "../Pages/Company"
 import IncomeTax from "../Pages/IncomeTax"
 import LeasePremium from "../Pages/LeasePremium"
+import WearTear from "../Pages/WearTear"
 
 
 
@@ -37,6 +38,7 @@ function Allroutes(){
             <Route path="/company" element={<Company />}/>
             <Route path="/incomeTax" element={<IncomeTax />}/>
             <Route path="/lease-premium" element={<LeasePremium />}/>
+            <Route path="/wear-tear" element={<WearTear />}/>
             
 
         </Routes>
