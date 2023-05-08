@@ -151,6 +151,42 @@ export const TravelDeductionPage = () => {
                 </div>
                 
             </div>
+            <div className='right'>
+                    <div className='right-flex'>
+                        <div>
+                            <img className='bot' src="https://www.taxtim.com/za/images/tim_full.svg" alt="Bot.png" />
+                        </div>
+                        <div className='t1'>
+                            <p style={{color:"#4d4d4d", fontWeight:"700"}}>Do your Tax
+                            Return in 20
+                            minutes or less!</p>
+                        </div>
+                    </div>
+                    <div className='t2'>
+                        <p>TaxGenius will help you:</p>
+                        <div>
+                            <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
+                                <span> Do Your Tax Return Easily</span>
+                            </div>
+                            <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg"  alt="Avoid penalties" />
+                                <span> Avoid penalties</span>
+                            </div>
+                            <div style={{display: "flex", paddingTop:"25px", paddingLeft:"35px", gap:"7px"}}>
+                                <img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg"  alt="Maximise your refund" />
+                                <span> Maximise your refund</span>
+                            </div>
+
+                        {/* <span><img  src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />  Do Your Tax Return Easily</span>
+                        <span><img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />  Avoid penalties</span>
+                        <span><img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />  Maximise your refund</span> */}
+                        
+                            <span style={{paddingLeft:"10px", }}>Genius uses your answers to complete your income tax return instantly and professionally, with everything filled in in the right place.</span>
+                        </div>
+                    </div>
+                    
+                </div>
         </div>
         <div className='results'>
         {calculated && (
@@ -173,19 +209,6 @@ export const TravelDeductionPage = () => {
   </div>
 )}
         </div>
-      
-      
-
-
-    
-      
-
-      
-
-      
-
-      
-
       
     </DIV>
   );
@@ -258,5 +281,43 @@ const DIV = styled.div`
         padding-left: 65px;
         color: #4d4d4d;
         background-color: #ffffff;
+    }
+    .right{
+        width: 100%;
+        
+        /* border: 1px solid black; */
+        padding-top: 20px;
+    }
+    .right-flex{
+        display: flex;
+    }
+    .bot{
+        width: 210px;
+        height: 180px;
+    }
+    .t1{
+        display: flex;
+        padding-top: 32px;
+    }
+    .t2 p{
+    
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+        padding: 0 20px 0 20px;
+        color: #4d4d4d;
+        background-color: #ffffff;
+    }
+    .t2 img{
+        width: 20px;
+        
+    }
+    .t2 span{
+        display: inline;
+        
+    }
+     select{
+        margin-left: 20px;
     }
 `
