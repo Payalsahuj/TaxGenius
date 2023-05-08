@@ -14,11 +14,13 @@ import styled from "styled-components"
 import { useState } from 'react'
 import Multistep from '../Component/Homelogin'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 // import KommunicateChat from '../Component/chat'
 function Home() {
     const [onvideo, setonvideo] = useState(false)
-   
+    const {auth,data}=useSelector((store)=> store.loginreducer)
+    console.log(auth,data)
     return <DIV onvideo={onvideo}>
         <div id='textrelative'>
             <img src={image} id='imgback' alt="" />
@@ -28,15 +30,6 @@ function Home() {
                     <h1>TO DO YOUR TAX RETURN.</h1>
                     <br />
                     <br style={{ display: onvideo ? 'none' : 'flex' }} />
-                    {/* <button 
-                    id="videobutton"
-                     style={{border:'2px solid red'}}
-                      onClick={() => setonvideo(true)}>
-                        <img src={bot} id='firstimg' alt="" /> 
-                        Watch the Video 
-                        <img style={{ paddingTop: '4px', width: '20px' }} src={arrow} alt="" />
-                    </button> */}
-                    {/* <button onClick={() => setonvideo(true)}>okok</button> */}
                     <div id="vedio">
                         <embed style={{ width: '28%', height: '220px' }} src="https://www.youtube.com/embed/nAFLsldyJfs" type="" />
                     </div>
@@ -64,7 +57,7 @@ function Home() {
         </div>
 
 
-        <div style={{ marginTop: '30%'}} >
+        <div id='afterimg' >
             <div id='firstdivres'>
                 <div id='firstdivresimg'>
                     <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center',paddingTop:'30px'}}>
@@ -270,6 +263,9 @@ const DIV = styled.div`
     width: 30%;
    
 }
+#afterimg{
+    margin-top: 15%;
+}
 #firstdivrestext{
     
     padding: 20px 25px;
@@ -405,6 +401,9 @@ const DIV = styled.div`
     grid-template-columns: repeat(2,1fr);
     gap:20px;
     }
+    #afterimg{
+    margin-top: 29%;
+}
  }
 
 

@@ -1,19 +1,12 @@
 import axios from "axios"
-import { ADD_DATA, CHANGE, GET_DATA } from "./actiontype"
+import { POST_DATA, POST_details } from "./actiontype"
 
-
-export const handleadd=(data)=>(dispatch)=>{
-    axios.post(`http://localhost:8080/login`,data).then((res)=>dispatch({type:ADD_DATA,payload:res.data}))
+export const handlepost=(data)=>(dispatch)=>{
+   return axios.post(`https://kjyt12.sse.codesandbox.io/login`,data).then((res)=>dispatch({type:POST_DATA,payload:res.data}))
 }
 
-export const handleget=async(dispatch)=>{
-    return axios.get(`http://localhost:8080/login`).then((res)=>{
-        dispatch({type:GET_DATA,payload:res.data})
-        return res.data
-    } )
-}
 
-export const changeauth=(dispatch)=>{
-    console.log('ok')
-    dispatch({type:CHANGE})
-}
+
+export const handlepostdetails=(data)=>(dispatch)=>{
+    return axios.post(`https://kjyt12.sse.codesandbox.io/userdetail`,data).then((res)=>dispatch({type:POST_details,payload:res.data}))
+ }

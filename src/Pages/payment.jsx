@@ -1,9 +1,11 @@
 
 import { useState } from "react"
-import { Navigate } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { Navigate, useNavigate } from "react-router-dom"
 
 import styled from "styled-components"
-import Home from "./Home"
+import { handlepostdetails } from "../Redux/logindata/action"
+// import Home from "./Home"
 const initialdata = {
     firstname: '',
     lastname: "",
@@ -13,7 +15,8 @@ const initialdata = {
 }
 function Paytax() {
     const [data, setdata] = useState(initialdata)
-    const [details, setdetails] = useState([])
+    const dispatch=useDispatch()
+    const navigate =useNavigate()
     function handlechange(e) {
         const { name, value } = e.target;
         setdata((prev)=>{
@@ -22,9 +25,22 @@ function Paytax() {
 
     }
     function handlesubmit() {
-        setdetails([...details, data]);
         
-        alert('Pyment Successfull');
+        let flag=true
+        for(let key in data){
+           if(!data[key]){
+            flag=false
+           }
+        }
+        if(flag){
+            dispatch(handlepostdetails(data))
+            alert('Your Payment is Successfully done')
+            navigate('/')
+        }
+        else{
+            alert('Need to Fill all the credentials')
+        }
+
         
         
     }
@@ -99,10 +115,8 @@ function Paytax() {
                             </div>
                             <div >
                                 <p style={{ marginTop: '10px' }}>Security Code</p>
-                                <input type="number" className="inputbox" />
-                                <p style={{ marginTop: '10px' }}>Billing ZIP Code</p>
-                                <input type="text" className="inputbox" />
-
+                                <input type="password" className="inputbox" />
+                                
                             </div>
                         </div>
                         <div id='divpay'><button id='paybutton' onClick={handlesubmit} >Click to pay Tax</button></div>

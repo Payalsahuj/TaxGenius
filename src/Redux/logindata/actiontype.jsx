@@ -1,3 +1,2 @@
-export const ADD_DATA="ADD_DATA"
-export const GET_DATA="GET_DATA"
-export const CHANGE="CHANGE"
+export const POST_DATA="POST_DATA"
+export const POST_details="POST_details"

@@ -24,9 +24,15 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 import logo from '../Images/TaxGenius_+_color-removebg-preview.png'
+import { Link as NONREFRESH, useNavigate } from 'react-router-dom';
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
-
+    const navigate=useNavigate()
+    function handlelogout(){
+        localStorage.setItem("login-data",JSON.stringify([]));
+        alert('Logout successfull')
+        navigate('/')
+    }
     return (
         <Box style={{width:'100%'}}  >
             <Flex
@@ -55,10 +61,10 @@ export default function WithSubnavigation() {
                     />
                 </Flex>
                 <Flex flex={{ base: 1 }} alignItems={'center'} justify={{ base: 'center', md: 'start' }}>
-                <Link  href={"/"}>
+                    <NONREFRESH to='/'>
                       {/* <img src={logo} width={'190px'} border='2px solid red' alt="" /> */}
                     <Image src={logo} width={'190px'}  alt=''/>
-                      </Link>
+                    </NONREFRESH>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
@@ -76,7 +82,7 @@ export default function WithSubnavigation() {
                         fontSize={{base:'xs',md:'sm'}}
                         fontWeight={600}
                         variant={'link'}
-                        href={'#'}>
+                        onClick={handlelogout}>
                         LOGOUT
                     </Button>
                     <Button
@@ -115,8 +121,9 @@ const DesktopNav = () => {
                     <Popover trigger={'hover'} placement={'bottom-start'}>
                         <PopoverTrigger>
                             <Link
+                            
                                 p={2}
-                                href={navItem.href ?? '#'}
+                                // href={navItem.href ?? '#'}
                                 fontSize={'sm'}
                                 fontWeight={500}
                                 color={linkColor}
@@ -124,7 +131,9 @@ const DesktopNav = () => {
                                     textDecoration: 'none',
                                     color: linkHoverColor,
                                 }}>
+                                    <NONREFRESH to={navItem.href ?? '#'}>
                                 {navItem.label}
+                                </NONREFRESH>
                             </Link>
                         </PopoverTrigger>
 
@@ -153,12 +162,14 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
     return (
         <Link
-            href={href}
+        
+            // href={href}
             role={'group'}
             display={'block'}
             p={2}
             rounded={'md'}
             _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+                <NONREFRESH to={href}>
             <Stack direction={'row'} align={'center'}>
                 <Box>
                     <Text
@@ -180,6 +191,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
                     <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
                 </Flex>
             </Stack>
+            </NONREFRESH>
         </Link>
     );
 };
@@ -205,12 +217,13 @@ const MobileNavItem = ({ label, children, href }) => {
             <Flex
                 py={2}
                 as={Link}
-                href={href ?? '#'}
+                // href={href ?? '#'}
                 justify={'space-between'}
                 align={'center'}
                 _hover={{
                     textDecoration: 'none',
                 }}>
+                    <NONREFRESH to={href ?? '#'}>
                 <Text
                     fontWeight={600}
                     color={useColorModeValue('gray.600', 'gray.200')}>
@@ -225,6 +238,7 @@ const MobileNavItem = ({ label, children, href }) => {
                         h={6}
                     />
                 )}
+                </NONREFRESH>
             </Flex>
 
             <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
