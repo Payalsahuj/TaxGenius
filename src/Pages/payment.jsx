@@ -1,6 +1,9 @@
 
 import { useState } from "react"
+import { Navigate } from "react-router-dom"
+
 import styled from "styled-components"
+import Home from "./Home"
 const initialdata = {
     firstname: '',
     lastname: "",
@@ -19,7 +22,11 @@ function Paytax() {
 
     }
     function handlesubmit() {
-        setdetails([...details, data])
+        setdetails([...details, data]);
+        
+        alert('Pyment Successfull');
+        
+        
     }
     
     return <DIV>
