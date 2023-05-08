@@ -24,18 +24,22 @@ export const CalculatorPage = () => {
                         </a>
                     </div>
                     <div>
+                        <a href="/taxrefundpage">
                         <img src="https://www.taxtim.com/za/images/calc-refund.png" alt="Tax Refund" />
                         <p>Tax Refund</p>
                         <div className='content'>
                             <span>How to calculate what your Tax Refund will be when you submit your tax return to SARS</span>
                         </div>
+                        </a>
                     </div>
                     <div>
+                        <a href="/lumpsumpage">
                         <img src="https://www.taxtim.com/za/images/calc-lump-sum.png" alt="Retairment Lump Sum" />
                         <p>Retairment Lump Sum</p>
                         <div className='content'>
                             <span>How to calculate the tax payable on Pension, Provident or Retirement Annuity Fund lump sums due to voluntary withdrawal</span>
                         </div>
+                        </a>
                     </div>
                     <div>
                         <a href="/traveldeductionpage">
@@ -47,25 +51,22 @@ export const CalculatorPage = () => {
                         </a>
                     </div>
                     <div>
-                        <img src="https://www.taxtim.com/za/images/calc-capital-gains.png" alt="Capital Gains Tax" />
-                        <p>Capital Gains Tax</p>
-                        <div className='content'>
-                            <span>How to calculate Capital Gains Tax on the disposal of your asset</span>
-                        </div>
-                    </div>
-                    <div>
+                        <a href="/aidkidpage">
                         <img src="https://www.taxtim.com/za/images/calc-health.png" alt="Medical Aid Credits" />
                         <p>Medical Aid Credits</p>
                         <div className='content'>
                             <span>How to calculate your medical tax credit/rebate</span>
                         </div>
+                        </a>
                     </div>
                     <div>
+                        <a href="/weartearpage">
                         <img src="https://www.taxtim.com/za/images/calc-wear-and-tear.png" alt="Water & Tear" />
-                        <p>Water & Tear</p>
+                        <p>Wear & Tear</p>
                         <div className='content'>
                             <span>How to calculate the Section 11(e) Depreciation / Wear and Tear deduction on the assets you use for work</span>
                         </div>
+                        </a>
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-retirement.png" alt="Retairment Saving" />
@@ -75,24 +76,35 @@ export const CalculatorPage = () => {
                         </div>
                     </div>
                     <div>
+                        <a href="/localintcalculator">
                         <img src="https://www.taxtim.com/za/images/calc-manufacturing-wear-and-tear.png" alt="Taxable Local interest" />
                         <p>Taxable Local interest</p>
                         <div className='content'>
                             <span>Taxable local interest calculator</span>
                         </div>
+                        </a>
                     </div>
                     <div>
+                        <a href="/foreigncal">
                         <img src="https://www.taxtim.com/za/images/calc-income-tax.png" alt="Foreign Dividends" />
                         <p>Foreign Dividends</p>
                         <div className='content'>
                             <span>How to calculate the amount of foreign dividends on taxable on your income tax assessment</span>
                         </div>
+                        </a>
                     </div>
                     <div>
                         <img src="https://www.taxtim.com/za/images/calc-capital-gains.png" alt="Home Office Calculator" />
                         <p>Home Office Calculator</p>
                         <div className='content'>
                             <span>How to claim your home office expenses when working from home</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://www.taxtim.com/za/images/calc-capital-gains.png" alt="Capital Gains Tax" />
+                        <p>Capital Gains Tax</p>
+                        <div className='content'>
+                            <span>How to calculate Capital Gains Tax on the disposal of your asset</span>
                         </div>
                     </div>
                     </div>
@@ -140,7 +152,7 @@ export const CalculatorPage = () => {
   )
 }
 const DIV = styled.div`
-    .main{
+     .main{
         width: 100%;
         padding-left: 44px;
         padding-top: 100px;
@@ -173,7 +185,7 @@ const DIV = styled.div`
     }
     .left{
         width: 100%;
-        /* border: 1px solid red; */
+         
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         padding-top: 0px;
@@ -183,21 +195,12 @@ const DIV = styled.div`
     }
     .left p{
         
-        /* border-top: 1px solid black; */
         position: absolute;
         text-align: center;
-        /* justify-items: center;
-        align-items: center; */
         z-index: 10;
         display: inline-block;
-        
         top: 80%;
         right: 30px;
-        /* margin-right: 100px;
-        
-        left: 0px;
-        right: 0px;
-        bottom: 0px; */
         font-size: 16px;
         color: #ffffff;
         
@@ -209,16 +212,11 @@ const DIV = styled.div`
         width: 195px;
         height: 195px;
         position: relative;
-        /* border: 1px solid gold; */
         z-index: 1;
-        
         background-color: #85c4cc;
-
     }
     .right{
         width: 35%;
-        
-        /* border: 1px solid black; */
         padding-top: 22px;
     }
     .right-flex{
@@ -272,5 +270,49 @@ const DIV = styled.div`
     .t2 span{
         display: inline;
         
+    } 
+    @media screen and (min-width: 719px) and (max-width: 1321px){
+    #textimg{
+    position:relative;
+    text-align:left;
+    top:80px;
+    left:10%;
+    font-size:27px;
+    width:90%;
     }
+    
+}
+@media screen and (min-width: 500px) and (max-width: 719px){
+    #textimg{
+    position:relative;
+    text-align:left;
+    top:50px;
+    left:10%;
+    font-size:17px;
+    width:90%;
+    flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+  .left {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 350px) {
+  .left {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 720px) {
+  .left-right {
+    flex-direction: column;
+  }
+  
+}
+@media screen and (max-width: 720px) {
+  .right-flex{
+    flex-direction: column;
+  }
+}
 `

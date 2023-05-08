@@ -369,4 +369,11 @@ const DIV = styled.div`
         display: inline;
         
     }
+    
+    @media screen and (max-width: 720px) {
+  .right {
+    flex-direction: column;
+  }
+  
+}
 `
