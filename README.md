@@ -71,7 +71,7 @@ She is responsible for making the landing page, about page, payment page, chatbo
 
    About section helps users to get the over view of taxgenius, it also provides informations about how the entire sytems having connection with other compayies, where as the bot system guides you when you need help for understanding the system.
    
-     Login page is having private routes to secure user details where user can not make payment whithout logging in. It stores all the user data in json file by performing crud operations.
+Login page is having private routes to secure user details where user can not make payment whithout logging in. It stores all the user data in json file by performing crud operations.
 
 
 
