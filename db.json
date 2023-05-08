@@ -1,13 +1,11 @@
 {
-    "login": [
-      {
-        "id":1,
-        "username":"Payal sahu",
-        "email":"sahupayal220@gmail.com",
-        "password":"payal"
-      }
-    ],
-    "userdetails":[
-
-    ]
-  }
+  "login": [
+    {
+      "email": "sahupayal220@gmail.com",
+      "password": "payal",
+      "username": "payal",
+      "id": 1
+    }
+  ],
+  "userdetails": []
+}

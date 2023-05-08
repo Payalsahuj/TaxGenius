@@ -58,11 +58,11 @@ function Navbar() {
                 <div >
                     <Breadcrumb fontSize={'13px'} separator='|'>
                         <BreadcrumbItem>
-                            <BreadcrumbLink href='#'>FAQ</BreadcrumbLink>
+                            <BreadcrumbLink href='/faq'>FAQ</BreadcrumbLink>
                         </BreadcrumbItem>
 
                         <BreadcrumbItem>
-                            <BreadcrumbLink href='#'>Blog</BreadcrumbLink>
+                        <a href='/blog'> <BreadcrumbLink >Blog</BreadcrumbLink></a>
                         </BreadcrumbItem>
 
                         <BreadcrumbItem isCurrentPage>

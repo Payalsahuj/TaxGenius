@@ -15,7 +15,14 @@ import TravelDeductionPage from "../Pages/TaravelDeductionPage"
 import {Company} from "../Pages/Company"
 import IncomeTax from "../Pages/IncomeTax"
 import LeasePremium from "../Pages/LeasePremium"
+
 import WearTear from "../Pages/WearTear"
+
+import { Signup } from "../Pages/Signup"
+import Blog from "../Pages/Blogs"
+import Faq from "../Pages/Faqs"
+import { Privateroute } from "../Private/privateroute"
+
 
 
 
@@ -27,7 +34,11 @@ function Allroutes(){
             <Route path="/" element={<Home/>}/>
 
             <Route path='/about' element={<About/>}/>
-            <Route path="/paytax" element={<Paytax/>}/>
+            <Route path="/paytax" element={
+            // <Privateroute>
+                <Paytax/>
+                //  </Privateroute> */}
+            }/>
 
 
             <Route path="/calculators" element={<CalculatorPage/>}/>
@@ -38,8 +49,14 @@ function Allroutes(){
             <Route path="/company" element={<Company />}/>
             <Route path="/incomeTax" element={<IncomeTax />}/>
             <Route path="/lease-premium" element={<LeasePremium />}/>
+
             <Route path="/wear-tear" element={<WearTear />}/>
             
+
+
+            <Route path="/login" element={<Signup/>}/>
+            <Route path="/blog" element={<Blog/>}/>
+            <Route path="/faq" element={<Faq/>}/>
 
         </Routes>
     </div>

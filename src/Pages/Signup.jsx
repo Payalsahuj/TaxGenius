@@ -6,22 +6,42 @@ import {
   Input,
   Stack,
   Button,
-  Heading,
-  Text,
-  useToast,
+  Heading
 } from "@chakra-ui/react";
+// import axios from "axios";
 
-import {  useState } from "react";
-import { Navigate } from "react-router-dom";
-import { Login } from "./Login";
+import {  useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import { Navigate } from "react-router-dom";
+import { changeauth, handleadd, handleget } from "../Redux/logindata/action";
+
 
 
 
 
 export const Signup = () => {
-  const initUser = { email: "", password: "", name: "" };
+  const initUser = { email: "", password: "", username: "" };
   const [user, setUser] = useState(initUser);
-
+  const auth =useSelector((store)=> store.loginreducer.auth)
+  const localdata=JSON.parse(localStorage.getItem("login-data")) || []
+  // console.log(localdata,auth)
+ const dispatch =useDispatch()
+ useEffect(()=>{
+  dispatch(handleget).then((res)=> {
+    res.forEach((ele)=>{
+      localdata.forEach((item)=>{
+        if(item.email===ele.email){
+          // console.log(item.email)
+          dispatch(changeauth)
+        }
+      })
+    })
+  })
+  if(auth){
+    alert('This user has already logged in')
+  }
+  
+ },[auth])
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -30,19 +50,21 @@ export const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localdata.push(user)
+    localStorage.setItem("login-data",JSON.stringify(localdata))
+    dispatch(handleadd(user))
+    
+   };
 
-   localStorage.setItem("login-data",JSON.stringify(user))
-   Navigate("/login")
-    };
-
-  
+  // console.log(data)
 
   return (
     <>
    
       <Flex
-        pt={"-200px"}
-        minH={"100vh"}
+        pt={"150px"}
+        // minH={"100vh"}
+       
         align={"center"}
         justify={"center"}
         m="auto"
@@ -63,7 +85,7 @@ export const Signup = () => {
                     borderColor={"#002E6E"}
                     placeholder="Enter Name"
                     type="text"
-                    name="name"
+                    name="username"
                     value={user.name}
                     onChange={handleChange}
                     required
