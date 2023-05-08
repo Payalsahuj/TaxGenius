@@ -14,13 +14,13 @@ import styled from "styled-components"
 import { useState } from 'react'
 import Multistep from '../Component/Homelogin'
 import { Link } from 'react-router-dom'
-import LargeWithNewsletter from '../Component/Footer'
+
 // import KommunicateChat from '../Component/chat'
 function Home() {
     const [onvideo, setonvideo] = useState(false)
-    console.log(onvideo)
+   
     return <DIV onvideo={onvideo}>
-        <div style={{ marginTop: '55px', position: 'absolute', width: '100%' }}>
+        <div id='textrelative'>
             <img src={image} id='imgback' alt="" />
             <div id='textimg'>
                 <b>
@@ -28,51 +28,67 @@ function Home() {
                     <h1>TO DO YOUR TAX RETURN.</h1>
                     <br />
                     <br style={{ display: onvideo ? 'none' : 'flex' }} />
-                    <button id="videobutton" onClick={() => setonvideo(true)}>
-                        <img src={bot} id='firstimg' alt="" /> Watch the Video <img style={{ paddingTop: '4px', width: '20px' }} src={arrow} alt="" />
-                    </button>
+                    {/* <button 
+                    id="videobutton"
+                     style={{border:'2px solid red'}}
+                      onClick={() => setonvideo(true)}>
+                        <img src={bot} id='firstimg' alt="" /> 
+                        Watch the Video 
+                        <img style={{ paddingTop: '4px', width: '20px' }} src={arrow} alt="" />
+                    </button> */}
+                    {/* <button onClick={() => setonvideo(true)}>okok</button> */}
                     <div id="vedio">
                         <embed style={{ width: '28%', height: '220px' }} src="https://www.youtube.com/embed/nAFLsldyJfs" type="" />
                     </div>
                 </b>
             </div>
-
+            
         </div>
-        <div width='100%'>
+        <div width='100%' className='formdiv'>
+            
             <div id="form" style={{
-                // border:'2px solid red',
+                
                 width: '35%'
             }} >
+                <button 
+                    id="videobutton"
+                     style={{border:'2px solid grey'}}
+                      onClick={() => setonvideo(true)}>
+                        <img src={bot} id='firstimg' alt="" /> 
+                        Watch the Video 
+                        <img style={{ paddingTop: '4px', width: '20px' }} src={arrow} alt="" />
+                    </button>
                 <Multistep />
+        
             </div>
         </div>
 
 
-        <div style={{ marginTop: '30%', border: "2px solid red" }} >
-            <div style={{ display: 'flex', justifyContent: 'space-evenly', gap: '100px', width: '100%', border: "2px solid green" }}>
-                <div style={{ width: '430px', border: '2px solid green' }}>
-
-                    <img src={decoreimg} width={'100%'} alt="" />
-
+        <div style={{ marginTop: '30%'}} >
+            <div id='firstdivres'>
+                <div id='firstdivresimg'>
+                    <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center',paddingTop:'30px'}}>
+                    <img src={decoreimg} width={'80%'}   alt="" />
+                    </div>
                 </div>
-                <div style={{ border: '2px solid black', padding: '20px 25px', textAlign: 'left', width: '50%' }}>
+                <div id='firstdivrestext' >
                     <h1 style={{ fontSize: '27px' }}><b>How Does TaxGenius Work?</b></h1>
                     <h1 style={{ fontSize: '24px' }}><b>It's quite easy actually!</b></h1>
                     <p><b>Let's have a chat. After answering my simple questions I'll complete your text return and file it directly with SARS for your maximum possible refund!</b></p>
                     <br />
                     <div >
-                        <h1 className='headfirst' ><img src={done}  alt="" />  <b>Register for TaxGenius account</b></h1>
+                        <h1 className='headfirst' ><img src={done} alt="" />  <b>Register for TaxGenius account</b></h1>
                         <p className='headpara'>Tell me a bit about your taxes and I'll show which TaxGenius package and price suits your need best</p>
                         <br />
-                        <h1 className='headfirst' ><img src={done}  alt="" />  <b>Have a chat with me online</b></h1>
+                        <h1 className='headfirst' ><img src={done} alt="" />  <b>Have a chat with me online</b></h1>
                         <p className='headpara'>We will give you the best possible way to return your tax easily, checking all deductions for maximum refund before filing at SARS.</p>
                         <br />
                         <h1 className='headfirst'><img src={done} alt="" />  <b>Pay by Card To submit your Return</b></h1>
                         <p className='headpara'>Pay for your tax return service via card directly on site.</p>
                         <br />
                         <div style={{ display: 'flex', gap: '20px' }}>
-                        <button id='buttonone'>FIND OUT MORE</button>
-                        <button id='buttontwo'>GET STARTED</button></div>
+                           <Link to='/about' ><button id='buttonone' >FIND OUT MORE</button></Link> 
+                            <button id='buttontwo'>GET STARTED</button></div>
                     </div>
 
                 </div>
@@ -80,7 +96,7 @@ function Home() {
             </div>
             <div  >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path fill="#DAEFF4" fill-opacity="1" d="M0,288L60,256C120,224,240,160,360,122.7C480,85,600,75,720,90.7C840,107,960,149,1080,149.3C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                    <path fill="#DAEFF4" fillOpacity="1" d="M0,288L60,256C120,224,240,160,360,122.7C480,85,600,75,720,90.7C840,107,960,149,1080,149.3C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                 </svg>
                 <div style={{ backgroundColor: "#DAEFF4" }}>
                     <h1 style={{ fontSize: '27px' }}><b>Why Should I Use TaxGenius to Do My Personal or Company Tax Return?</b></h1>
@@ -90,7 +106,7 @@ function Home() {
                     <p>It directly with SARS for your maximum possible refund!</p>
                     <br />
                     <br />
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '35px', padding: '0px 80px' }}>
+                    <div id='arrangegrid'>
                         <div className='griddiv'>
                             <h1 className='griddivhead'><img src={puzzle} style={{ display: 'block', width: '45px', marginRight: '20px' }} alt="" /><b> Full Integrated</b></h1>
                             <br />
@@ -124,16 +140,16 @@ function Home() {
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path fill="#DAEFF4" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,96C640,117,800,203,960,245.3C1120,288,1280,288,1360,288L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                    <path fill="#DAEFF4" fillOpacity="1" d="M0,160L80,138.7C160,117,320,75,480,96C640,117,800,203,960,245.3C1120,288,1280,288,1360,288L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
                 </svg>
 
-                <div style={{ padding: '10px 60px', border: '2px solid red', marginBottom: '60px' }}>
+                <div style={{ padding: '10px 60px', marginBottom: '60px' }}>
                     <h1 style={{ fontSize: '27px' }}><b>Who Partners With TaxGenius?</b></h1>
                     <p style={{ fontSize: '19px' }}>We have several <span style={{ color: '#0c690c' }}><b>fantastic</b></span> partner offers.</p>
                     <br />
                     <br />
                     <br />
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
+                    <div id="gridlogo">
                         <div className='secondgrid'>
                             <img className='secondgridimg' src='https://www.taxtim.com/za/images/momentum-logo.png' alt="" />
                             <br />
@@ -161,30 +177,26 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div style={{ border: '2px solid yellow', backgroundColor: '#ECEFF1', padding: '30px 10px' }}>
+                <div style={{ backgroundColor: '#ECEFF1', padding: '30px 10px' }}>
                     <h1 style={{ fontSize: '27px' }}><b>Who Uses TaxGenius?</b></h1>
                     <p style={{ fontSize: '19px' }}>TaxGenius has Helped 14 Million South Africans in 11 Years. Here's What They Say.</p>
                     <br />
                     <br />
-                    <div style={{ display: 'flex', justifyContent: 'space-evenly', gap: '20px', padding: '20px 40px' }}>
+                    <div id='thriddivcontainer'>
                         <div className='thirddiv'>
-                            <img src={bot}  alt="" />
+                            <img src={bot} alt="" />
                             <br />
                             <h1>Thank you so much for saving the skin of this lastminute.com tax payers!</h1>
                         </div>
                         <div className='thirddiv'>
-                            <img src={bot}  alt="" />
+                            <img src={bot} alt="" />
                             <br />
                             <h1>Thank you for making this so easy for me. Especiallytaht I'm not really computer literate.</h1>
                         </div>
                     </div>
                 </div>
                 <div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path fill="#DAEFF4" fill-opacity="1" d="M0,288L80,282.7C160,277,320,267,480,234.7C640,203,800,149,960,154.7C1120,160,1280,224,1360,256L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-                    </svg>
-                    <LargeWithNewsletter/>
+                   
                 </div>
             </div>
         </div>
@@ -208,6 +220,12 @@ const DIV = styled.div`
     font-size:30px;
     width:90%;
 }
+#textrelative{
+    margin-top: 55px;
+    position: absolute;
+    width: 100%;
+    pointer-events:all;
+}
 #videobutton{
     position:relative;
     display:${({ onvideo }) => onvideo ? 'none' : 'flex'};
@@ -215,6 +233,13 @@ const DIV = styled.div`
     background-color:white;
     padding:10px 10px 5px 100px;
     border-radius:5px;
+    top:70px;
+    right:150%;
+}
+
+
+#vedio{
+    display:${({ onvideo }) => onvideo ? 'flex' : 'none'};
 }
 #firstimg{
     position:absolute;
@@ -223,15 +248,43 @@ const DIV = styled.div`
     left:1%;
 }
 
-#vedio{
-    display:${({ onvideo }) => onvideo ? 'flex' : 'none'};
-}
 
 #form{
     position:relative;
-  
     right:-63%;
-    top:300px;  
+    top:40%;
+}
+.formdiv{
+    /* border: 3px solid green; */
+     position: relative;
+      height: 700px;
+}
+#firstdivres{
+    display: flex;
+    justify-content:space-evenly;
+     gap: 100px;
+      width: 100%;
+       
+}
+#firstdivresimg{
+    width: 30%;
+   
+}
+#firstdivrestext{
+    
+    padding: 20px 25px;
+    text-align: left;
+    width: 50%;
+}
+#arrangegrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+      gap: 35px;
+       padding: 40px 80px;
+}
+#gridlogo{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 .headfirst{
     display: flex;
@@ -246,7 +299,7 @@ const DIV = styled.div`
    padding-left: 45px;
 }
  #buttonone{
-    border: 2px solid green;
+   border:2px solid grey;
     padding: 5px 25px;
     border-radius:5px;
  }
@@ -257,13 +310,13 @@ const DIV = styled.div`
      padding:5px 25px;
  }
  .griddiv{
-     border: 2px solid red;
+    background-color:white;
       padding: 10px 10px;
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
      border-radius:6px;
  }
  .griddivhead{
-    border: 2px solid orange;
+    
      display: flex;
      justify-content:center;
      align-items:center;
@@ -277,7 +330,14 @@ const DIV = styled.div`
     width: 200px;
      margin: auto;
  }
+ #thriddivcontainer{
+    display: flex;
+    justify-content: space-evenly;
+     gap: 20px;
+      padding: 20px 40px;
+ }
  .thirddiv{
+    background-color:white;
     border: 2px solid grey;
     border-radius: 10px;
     padding: 50px 5px;
@@ -288,5 +348,221 @@ const DIV = styled.div`
     display: block;
      width: 50px;
       margin: auto;
+ }
+ @media screen and (min-width: 719px) and (max-width: 1321px){
+    #textimg{
+    position:relative;
+    text-align:left;
+    top:80px;
+    left:10%;
+    font-size:27px;
+    width:90%;
+}
+#videobutton{
+    position:relative;
+    display:${({ onvideo }) => onvideo ? 'none' : 'flex'};
+    font-size:18px;
+    background-color:white;
+    padding:10px 10px 5px 100px;
+    border-radius:5px;
+}
+
+#vedio{
+    display:${({ onvideo }) => onvideo ? 'flex' : 'none'};
+}
+    #form{
+        display:none;
+    } 
+    .formdiv{
+    
+     position: relative;
+      height: 350px;
+}
+    #firstdivres{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    }
+    #firstdivresimg{
+    width: 70%;
+    
+    }
+    #firstdivrestext{
+   
+    padding: 20px 25px;
+    text-align: left;
+    width: 90%;
+    }
+    #arrangegrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 35px;
+    padding: 0px 80px;
+    }
+    #gridlogo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    }
+ }
+
+
+ @media screen and (min-width: 500px) and (max-width: 719px){
+    #textimg{
+    position:relative;
+    text-align:left;
+    top:50px;
+    left:10%;
+    font-size:17px;
+    width:90%;
+    }
+    #form{
+        display:none;
+    } 
+    .formdiv{
+    
+     position: relative;
+      height: 250px;
+    }
+    #videobutton{
+    position:relative;
+    display:${({ onvideo }) => onvideo ? 'none' : 'flex'};
+    font-size:18px;
+    background-color:white;
+    padding:10px 10px 5px 100px;
+    border-radius:5px;
+}
+
+#vedio{
+    display:${({ onvideo }) => onvideo ? 'flex' : 'none'};
+}
+    #firstdivres{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    }
+    #firstdivresimg{
+    width: 90%;
+    
+    }
+    #firstdivrestext{
+    
+    padding: 20px 25px;
+    text-align: left;
+    width: 90%;
+    }
+    #arrangegrid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 35px;
+    padding: 0px 80px;
+    }
+    #gridlogo{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:20px;
+    }
+    #thriddivcontainer{
+    display: flex;
+    flex-direction:column;
+    
+    }
+    .thirddiv{
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 50px 0px;
+    margin:auto;
+     width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #firstimg{
+    position:absolute;
+    width:70px;
+    top:-100.5%;
+    left:1%;
+    }
+ }
+
+
+
+ 
+ @media screen and (max-width: 500px){
+    #textimg{
+    position:relative;
+    text-align:left;
+    top:50px;
+    left:10%;
+    font-size:10px;
+    width:90%;
+    }
+    #videobutton{
+    position:relative;
+    display:${({ onvideo }) => onvideo ? 'none' : 'flex'};
+    font-size:18px;
+    background-color:white;
+    padding:10px 10px 5px 100px;
+    border-radius:5px;
+}
+
+#vedio{
+    display:${({ onvideo }) => onvideo ? 'flex' : 'none'};
+}
+    #form{
+        display:none;
+    } 
+    .formdiv{
+    
+     position: relative;
+      height: 240px;
+    }
+    #firstdivres{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    }
+    #firstdivresimg{
+    width: 90%;
+
+    }
+    #firstdivrestext{
+    
+    padding: 20px 25px;
+    text-align: left;
+    width: 90%;
+    }
+    #arrangegrid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 35px;
+    padding: 0px 80px;
+    }
+    #gridlogo{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:20px;
+    }
+    #thriddivcontainer{
+    display: flex;
+    flex-direction:column;
+  
+    }
+    .thirddiv{
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 50px 0px;
+    margin:auto;
+     width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+   
+    #firstimg{
+    position:absolute;
+    width:50px;
+    top:-43.5%;
+    left:1%;
+    }
  }
 `
