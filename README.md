@@ -57,4 +57,27 @@
 
 #  Cloned Website
 TaxGenius is the cloned website of TaxTim , it is an online digital tax assitant. It helps you to make tax pay easily.
+It introduces a conversational approach with its simple and intuitive interface which helps individuals compute tax returns.
+Thus, you enjoy the same level of interaction as an engagement with a Tax consultant.
+
+
+## Team manager:- Prajwal Jaiswal(IA).
+
+
+## Team member 1:- Payal sahu (Team lead)
+She is responsible for making the landing page, about page, payment page, chatbot system and login page of this website.
+
+   The landing pages is consists of various libraries and external tools, where all the user get the first intraction to the website. It's a main section of the website which connects all the other pages/route to movie from one section to another.   
+
+   About section helps users to get the over view of taxgenius, it also provides informations about how the entire sytems having connection with other compayies, where as the bot system guides you when you need help for understanding the system.
+   
+     Login page is having private routes to secure user details where user can not make payment whithout logging in. It stores all the user data in json file by performing crud operations.
+
+
+
+## Team member 2:- Prajit Santra
+
+
+## Team member 3:- senapathi sowjanya
+
 
