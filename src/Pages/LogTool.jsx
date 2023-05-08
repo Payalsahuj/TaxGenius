@@ -47,7 +47,7 @@ function LogTool() {
             <h2>Get our SARS Logbook App on your phone today</h2>
             <p>Keeping your SARS travel logbook in order used to be a headache!
               Now you can keep your vehicle log book up to date with<br />
-              <span id='span'> one-click simplicity from TaxTim.</span></p>
+              <span id='span'> one-click simplicity from TaxGenius.</span></p>
             <div className='tick-image'>
               <div style={{ display: "flex", paddingLeft: "35px", gap: "10px", width: "500px" }}>
                 <img src="https://www.taxtim.com/za/images/icon_tick_circle.svg" alt="done-img" />
@@ -73,11 +73,11 @@ function LogTool() {
             <div className='bottom-p' style={{fontSize:"10px",width:"800px",margin:"25px 0px"}}>
               <p>Our Logbook App is a progressive web-app, thus it works on iPhone, Android, PC and more.</p>
             </div>
-            <div className='bottom-heading' style={{fontSize:"17px",fontWeight:"700",color:"black"}}>
-              <p>GET YOUR FREE VEHICLE LOGBOOK</p>
+            <div className='bottom-heading' style={{fontWeight:"700",color:"#646566"}}>
+              <h3>GET YOUR FREE VEHICLE LOGBOOK</h3>
             </div>
             <div style={{fontSize:"10px",width:"800px",margin:"25px 0px"}}>
-              <p>Start using our Logbook App by visiting <span style={{fontSize:"17px",fontWeight:"700",color:"#646566"}}>logbook.taxtim.com</span> in your cellphone browser now. Once the app has loaded, add it to your home screen for future use.</p>
+              <p>Start using our Logbook App by visiting <span style={{fontSize:"17px",fontWeight:"700",color:"#646566"}}>logbook.taxGenius.com</span> in your cellphone browser now. Once the app has loaded, add it to your home screen for future use.</p>
             </div>
             <a href='https://logbook.taxtim.com/#/'>
             <Button
@@ -226,7 +226,7 @@ const DIV = styled.div`
    .bottom-heading{
     font-weight:bolder;
     color:black;
-    border:1px solid black;
+    /* border:1px solid black; */
     margin:5px 0px;
    }
    .div-2 button{
