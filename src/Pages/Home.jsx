@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom'
 // import KommunicateChat from '../Component/chat'
 function Home() {
     const [onvideo, setonvideo] = useState(false)
-    console.log(onvideo)
+   
     return <DIV onvideo={onvideo}>
         <div id='textrelative'>
             <img src={image} id='imgback' alt="" />
