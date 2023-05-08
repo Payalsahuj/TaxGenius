@@ -73,7 +73,7 @@
 
 
 #  Cloned Website
-TaxGenius is the cloned website of TaxTim , it is an online digital tax assistant. It helps you to make tax pay easily.
+TaxGenius is the cloned website of TaxTim , an online digital tax assistant that helps you to make tax pay easily.
 It introduces a conversational approach with its simple and intuitive interface which helps individuals compute tax returns.
 Thus, you enjoy the same level of interaction as an engagement with a Tax consultant.
 
