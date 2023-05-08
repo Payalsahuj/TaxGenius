@@ -31,11 +31,17 @@
 
 │   ├── Payment.jsx
 
+│   ├── LogTool.jsx
+
+│   ├── LeasePremium.jsx
+
+│   ├── Signup.jsx
+
 │   ├── CalculatorPage.jsx
 
 │   ├── SalarytaxPage.jsx
 
-│   ├── LogTool.jsx
+│   ├── TaxRefundPage.jsx
 
 │   ├── TravelDeductionPage.jsx
 
@@ -43,9 +49,16 @@
 
 │   ├── IncomeTax.jsx
 
-│   ├── LeasePremium.jsx
+│   ├── LumpsumPage.jsx
 
-│   ├── Signup.jsx
+│   ├── AidkidPage.jsx
+
+│   ├── WeartearPage.jsx
+
+│   ├── LocalIntCalculator.jsx
+
+│   ├── Foreigncal.jsx
+
 
 
 
@@ -76,8 +89,15 @@ Login page is having private routes to secure user details where user can not ma
 
 
 ## Team member 2:- Prajit Santra
+He is responsible for making Tax calculator of this website, where tax calculator page is consist of Salary tax, Tax Refund, Retirement Lump sum, Travel Deduction, Medical Aid Credit, Wer and Tear, Taxable Local Interest and Foreign Dividens calculators. where each and every calculator are responsible for providing easy and fast  way for calculation of taxs.
+
+The whole tax calculator systems are more focused towards the Maths and algorithum, where this page is the core section of the entire taxgenius system.
 
 
 ## Team member 3:- senapathi sowjanya
+She is responsible for making the Company calculator and logbook section of taxgenius, where Company calculator page is consist of Income tax and Lease Premium calculators for calculation of taxs,in logbook page we can directly login to the logbook. Where each and every calculator are responsible for providing easy and fast  way for calculation of taxs.
+
+
+The whole tax calculator systems are more focused towards the Maths and algorithum, where this page is the core section of the entire taxgenius system.
 
 
