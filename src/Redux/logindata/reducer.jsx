@@ -1,19 +1,19 @@
-import { ADD_DATA, CHANGE, GET_DATA } from "./actiontype"
+import { POST_DATA, POST_details } from "./actiontype"
+
 
 const initial={
     auth:false,
-    data:[]
+    data:[],
+    usersdetail:[]
 }
 export const reducer=(state=initial,action)=>{
     switch(action.type){
-        case ADD_DATA:{
-            return {...state,data:[...state.data,action.payload]}
+        case POST_DATA:{
+            
+            return {...state,data:[...state.data,action.payload],auth:true}
         }
-        case GET_DATA:{
-            return {...state,data:action.payload}
-        }
-        case CHANGE:{
-            return {...state,auth:true}
+        case POST_details:{
+            return {...state,usersdetail:[...state.usersdetail,action.payload]}
         }
         default:{
             return state

@@ -31,9 +31,10 @@ function Allroutes(){
 
             <Route path='/about' element={<About/>}/>
             <Route path="/paytax" element={
-            // <Privateroute>
+             <Privateroute>
                 <Paytax/>
-                //  </Privateroute> */}
+            </Privateroute> 
+
             }/>
 
 

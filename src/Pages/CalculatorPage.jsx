@@ -145,6 +145,7 @@ const DIV = styled.div`
         padding-left: 44px;
         padding-top: 100px;
         font-family: Arial, Helvetica, sans-serif;
+        margin-bottom:150px;
     }
     .heading{
         text-align: left;

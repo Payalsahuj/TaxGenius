@@ -10,10 +10,12 @@ import {
 } from "@chakra-ui/react";
 // import axios from "axios";
 
-import {  useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import {  useDispatch, useSelector } from "react-redux";
 // import { Navigate } from "react-router-dom";
-import { changeauth, handleadd, handleget } from "../Redux/logindata/action";
+
+import { useNavigate } from "react-router-dom";
+import { handlepost } from "../Redux/logindata/action";
 
 
 
@@ -22,26 +24,11 @@ import { changeauth, handleadd, handleget } from "../Redux/logindata/action";
 export const Signup = () => {
   const initUser = { email: "", password: "", username: "" };
   const [user, setUser] = useState(initUser);
-  const auth =useSelector((store)=> store.loginreducer.auth)
+  const navigate =useNavigate();
   const localdata=JSON.parse(localStorage.getItem("login-data")) || []
-  // console.log(localdata,auth)
- const dispatch =useDispatch()
- useEffect(()=>{
-  dispatch(handleget).then((res)=> {
-    res.forEach((ele)=>{
-      localdata.forEach((item)=>{
-        if(item.email===ele.email){
-          // console.log(item.email)
-          dispatch(changeauth)
-        }
-      })
-    })
-  })
-  if(auth){
-    alert('This user has already logged in')
-  }
   
- },[auth])
+  const dispatch=useDispatch()
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -51,12 +38,12 @@ export const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     localdata.push(user)
-    localStorage.setItem("login-data",JSON.stringify(localdata))
-    dispatch(handleadd(user))
-    
+    localStorage.setItem("login-data",JSON.stringify(localdata));
+    dispatch(handlepost(user)).then(()=> navigate('/'))
+  
    };
 
-  // console.log(data)
+
 
   return (
     <>
@@ -126,7 +113,7 @@ export const Signup = () => {
                       bg: "blue.600",
                     }}
                   >
-                    Sign Up
+                   LOGIN
                   </Button>
                 
                 

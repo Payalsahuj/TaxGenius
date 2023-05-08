@@ -1,27 +1,22 @@
-import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { Navigate, useLocation } from "react-router-dom"
-import { changeauth, handleget } from "../Redux/logindata/action"
+import { useSelector } from "react-redux"
+import { Navigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
+
 
 
 export const Privateroute = ({ children }) => {
-  
-    const auth = useSelector((store) => store.loginreducer.auth)
+    // const navigate=useNavigate()
     const localdata = JSON.parse(localStorage.getItem("login-data")) || []
-    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(handleget).then((res) => {
-            res.forEach((ele) => {
-                localdata.forEach((item) => {
-                    if (item.email === ele.email) {
-                        console.log(item.email)
-                        dispatch(changeauth)
-                    }
-                })
-            })
+    const {auth,data}=useSelector((store)=> store.loginreducer)
+    console.log(auth,data,localdata)
+    let flag=false
+    localdata.forEach((item)=>{
+        data.forEach((ele)=>{
+            if(ele.email===item.email){
+                flag=true
+            }
         })
+    })
+    return flag?children:<Navigate to={'/login'}/>
 
-    }, [])
-
-    return auth ? children : <Navigate to={'/login'} />
 }
