@@ -4,6 +4,43 @@ import { Button } from '@chakra-ui/react';
 // import image from "../Images/homefront_cleanup.png"
 
 function WearTear() {
+  const [isAuth,setIsAuth]=useState(false)
+  const [value,setValue]=useState()
+  const [year,setYear]=useState()
+  const [secondyear,setSecondYear]=useState()
+  // console.log("do",secondyear)
+
+  const handleClick=()=>{
+    setIsAuth(true)
+   
+      if(year==2013){
+        setSecondYear(2014)
+      }else if(year==2014){
+        setSecondYear(2015)
+      }else if(year==2015){
+        setSecondYear(2016)
+      }else if(year==2016){
+        setSecondYear(2017)
+      }else if(year==2017){
+        setSecondYear(2018)
+      }else if(year==2018){
+        setSecondYear(2019)
+      }else if(year==2019){
+        setSecondYear(2020)
+      }else if(year==2020){
+        setSecondYear(2021)
+      }else if(year==2021){
+        setSecondYear(2022)
+      }else if(year==2022){
+        setSecondYear(2023)
+      }else if(year==2023){
+        setSecondYear(2024)
+      }
+    
+        
+    
+  }
+  
 
   return (
     <DIV>
@@ -43,7 +80,7 @@ function WearTear() {
                   <option value="December">December</option>
                 </select>
 
-                <select  style={{ padding: "0px 5px", margin: "10px 0px" }}>
+                <select onChange={(e)=>setYear(e.target.value)} style={{ padding: "0px 5px", margin: "10px 0px" }}>
                   <option value="2023">2023</option>
                   <option value="2022">2022</option>
                   <option value="2021">2021</option>
@@ -66,7 +103,7 @@ function WearTear() {
                   type="number"
                   id="salary"
                   style={{ padding: "5px", margin: "5px 0px 15px 5px" }}
-                 
+                 onChange={(e)=>setValue(e.target.value)}
                 />
               </div>
               
@@ -104,11 +141,19 @@ function WearTear() {
               // border='0px'
               borderRadius={"none"}
               borderColor='green.500'
-              
+              onClick={handleClick}
 
             >
               CALCULATE!
             </Button>
+
+            <div>
+              {isAuth?(<div>
+                <h2>Allowed Wear and Tear over the years:</h2>
+                <p>Year 1 ({year} tax year): R {value}.00 (100%)</p>
+                <p>Year 2 ({secondyear} tax year): R 0.00 (0%)</p>
+              </div>):(<div></div>)}
+            </div>
 
           </div>
           <div className='right-part'>
