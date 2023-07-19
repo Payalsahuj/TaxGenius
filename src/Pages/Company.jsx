@@ -217,7 +217,7 @@ const DIV = styled.div`
         }
     }
     .content span{
-        /* border:1px solid red; */
+        
         color: white;
         font-size: 14px;
         margin-bottom: 65px;
@@ -244,7 +244,7 @@ const DIV = styled.div`
 
     .left div {
       margin-bottom: 10px;
-      /* You may want to adjust the height and other styles for mobile view */
+    
     }
 
     .right {
