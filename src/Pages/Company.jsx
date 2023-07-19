@@ -223,6 +223,37 @@ const DIV = styled.div`
         margin-bottom: 65px;
     }
     
+
+    
+  @media (max-width: 768px) {
+    .main {
+      padding-left: 20px;
+    }
+
+    .left-right {
+      display: block;
+    }
+
+    .left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .left div {
+      margin-bottom: 10px;
+      /* You may want to adjust the height and other styles for mobile view */
+    }
+
+    .right {
+      width: 100%;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 0;
+    }
+  }
        
 `
 
