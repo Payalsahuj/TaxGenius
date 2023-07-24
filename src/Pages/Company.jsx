@@ -217,12 +217,82 @@ const DIV = styled.div`
         }
     }
     .content span{
-        /* border:1px solid red; */
+        
         color: white;
         font-size: 14px;
         margin-bottom: 65px;
     }
     
+
+    
+ 
+    @media (max-width: 768px) {
+        .main {
+            padding-left: 20px;
+        }
+    
+        .left-right {
+            display: block;
+        }
+    
+        .left {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Display two columns */
+            gap: 20px;
+        }
+    
+        .left div {
+            width: 100%; /* Each div should take the full width */
+        }
+    
+        .right {
+            /* width: 100%;
+            height:50px;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; */
+            visibility:hidden;
+        }
+        .both{
+            display:flex;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 410px) {
+    .main {
+      padding-left: 20px;
+    }
+
+    .left-right {
+      display: block;
+    }
+
+    .left {
+      /* Change the grid-template-columns to a single column */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .left div {
+      /* Remove margin-top to stack the divs vertically */
+      margin-top: 0;
+    }
+
+    .right {
+        visibility:hidden;    }
+
+    .both {
+      display: flex;
+      flex-direction: column;
+    }
+  }
        
 `
 
